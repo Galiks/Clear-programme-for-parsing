@@ -22,7 +22,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 @Component
-public class MegaBonusParser implements ParserInterface {
+public class MegaBonusParser /*implements ParserInterface*/ {
 
     private final String patternForShopsPage = ":\"\\\\\\/shop\\\\\\/[^'!@\"#$%^&*()=+№;:?\\\\\\/]+";
     private final Pattern pattern = Pattern.compile(patternForShopsPage);
@@ -36,7 +36,7 @@ public class MegaBonusParser implements ParserInterface {
     }
 
     @Timer
-    @Override
+//    @Override
     public List<Shop> parsing() {
 
         System.setProperty("webdriver.chrome.driver", "E:/Download/chromedriver_win32/chromedriver.exe");
